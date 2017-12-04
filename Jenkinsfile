@@ -1,4 +1,4 @@
-properties([[$class: 'GithubProjectProperty', displayName: '', projectUrlStr: 'https://github.com/VeridicSolutionsOrg/Veridic_NorthCarolina.git/'], pipelineTriggers([githubPush()])])
+properties([[$class: 'GithubProjectProperty', displayName: '', projectUrlStr: 'https://github.com/syamsundarreddy78/multibranch.git'], pipelineTriggers([githubPush()])])
 pipeline {
     agent any
         stages {
@@ -24,10 +24,6 @@ pipeline {
             when {
                 branch 'master'
             }
-            stage('Deployed'){
-                when{
-                    branch 'Developer_1'
-                }
             steps {
                 echo 'Deploying'
             }
