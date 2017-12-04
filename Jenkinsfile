@@ -28,7 +28,7 @@ pipeline {
                 echo 'Deploying'
             }
         }
-    }
+    
      stage('Deployed') {
             when {
                 branch 'master'
@@ -38,4 +38,3 @@ pipeline {
             }
         }
     }
-}
