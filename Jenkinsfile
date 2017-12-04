@@ -1,3 +1,4 @@
+properties([[$class: 'GithubProjectProperty', displayName: '', projectUrlStr: 'https://github.com/syamsundarreddy78/multibranch.git'], pipelineTriggers([githubPush()])])
 pipeline {
     agent any
         stages {
