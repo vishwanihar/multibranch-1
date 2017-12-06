@@ -1,22 +1,5 @@
 properties([[$class: 'GithubProjectProperty', displayName: '', projectUrlStr: 'https://github.com/syamsundarreddy78/multibranch.git'],
-            pipelineTriggers([
-                        $class: "GithubPushTrigger",
-		triggerOnPush: true,
-		triggerOnMergeRequest: true,
-		triggerOpenMergeRequestOnPush: "both",
-		triggerOnNoteRequest: true,
-		noteRegex: "REBUILD!",
-		skipWorkInProgressMergeRequest: true,
-		ciSkip: false,
-		setBuildDescription: true,
-		addNoteOnMergeRequest: true,
-		addCiMessage: true,
-		addVoteOnMergeRequest: true,
-		acceptMergeRequestOnSuccess: false,
-		branchFilterType: "NameBasedFilter",
-		targetBranchRegex: "master",
-		includeBranchesSpec: "master",
-		excludeBranchesSpec: ""])])
+            pipelineTriggers([githubPush()])])
 pipeline {
     agent any
         stages {
