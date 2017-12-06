@@ -29,13 +29,4 @@ pipeline {
             }
         }
       }
-     stage('Deployed') {
-            when {
-                branch 'master'
-            }
-            steps {
-                echo 'Deployed'
-            }
-        }
-      }
 }
