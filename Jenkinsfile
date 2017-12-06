@@ -28,4 +28,5 @@ pipeline {
                 echo 'Deploying'
             }
         }
+      }
 }
