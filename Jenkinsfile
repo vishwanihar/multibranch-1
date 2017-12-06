@@ -17,7 +17,7 @@ pipeline {
                 environment name: 'JOB_NAME', value: 'foo'
             }
             steps {
-                echo 'Testing'
+                echo 'Testing.............'
             }
         }
         stage('Deploy') {
